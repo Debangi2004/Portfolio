@@ -13,6 +13,13 @@
       background-color: #a99dff;
 }
 
+@media screen and (max-width: 600px) {
+      h1{
+            font-size: 30px;
+
+      }
+}
+
 :root{
       --bg-color : #fff;
       --main-color : #033a80;
@@ -307,7 +314,30 @@ section{
       background: var(--hover);
 }
 
- 
+@media screen  and (max-width: 750px) {
+      .home{
+            padding-left: 0px;
+            padding-top: 50px;            
+      }
+      .home-text span{
+            font-size: 24px;
+      }
+      .home-text h1{
+            font-size: 36px;
+      }
+      .home-text h3{
+            font-size: 24px;
+      } 
+      .home-text p{
+            font-size: 24px;
+      } 
+      .home-text strong{
+            font-size: 29px;
+      } 
+      .home-img{
+            display: none;
+      } 
+ }
 
 
 /*----------------------------------------------ABOUT----------------------------------------------------*/
@@ -328,11 +358,19 @@ section{
       color: var(--main-color);
 }
 
+.section.about-container{
+      margin: 0px 0px 0px 0px;
+      padding: 0px 0px 0px 0px;
+}
+
 .about-container{
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      @media (min-width: 1300px) {
+            flex-direction: column;
+      }
 }
 
 .picture-details{
@@ -390,6 +428,8 @@ section{
       color: var(--text-color);
       text-align: justify;
 }
+
+.about-details
 
 .about-details span{
       font-size: 17.2px;
@@ -557,4 +597,250 @@ section{
 
 .service-list div:hover{
       transform: translateY(-10px);
+}
+
+
+
+
+/*---------------------------------------------CONTACT ME---------------------------------------------------*/
+
+
+.contactSection{
+      position: relative;
+      padding-bottom: 32px;
+      margin-bottom: 0px;
+      background-color: #272154;
+      display: flex;
+      flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 600px) {
+      .contactSection{
+            display: flex;
+            flex-wrap: wrap;
+      }
+}
+
+.contactSection h1{
+      position: relative;
+      font-size: 30px;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+}
+
+.contact-heading h2{
+      position: relative;
+      text-align: center;
+}
+
+.contact{
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      padding: 20px 20px 0px 0px;
+      margin: 0px 0px 0px 0px;
+      display: flex;
+      flex-wrap: wrap;      
+      justify-content: center;
+      align-items: center;
+      background-color: #272154;
+}
+
+.contactSection.active,
+.contact.active{
+      background-color: #4c458a;
+}
+
+.contact-items{
+      display: flex;
+      width: 100%;
+      max-width: 1100;
+      justify-content: space-evenly;
+}
+
+.contactLeft{
+      flex-basis: 40%;
+      margin-bottom:12px;
+      justify-content: center;
+      align-items: center;
+}
+
+h2{
+      font-weight: 700;
+      font-size: 30px;
+      padding-bottom: 10px;
+}
+
+.contact-head{
+      position: relative;
+      margin-top: 0px;
+      margin-bottom: 18px;
+      display: inline-block;
+}
+
+.contact-head::before{
+      position: absolute;
+      content: '';
+      width: 75%;
+      height: 2px;
+      background-color: #000;
+      top: 93%;
+      left: 0;
+}
+
+.contact-head::after{
+      position: absolute;
+      content: '';
+      width: 50%;
+      height: 3px;
+      background-color: cyan;
+      top: calc(93% - 1px);
+      left: 0;
+}
+
+.contactRight{
+      position: relative;
+      height: 500px;
+      flex-basis: 50%;
+      background-color: #4c458a;
+      border-radius: 30px 2px;
+      overflow: hidden;
+}
+
+.contactRight::before{
+      position : absolute;
+      content:'';
+      top: -50%;
+      left: -50%;
+      width: 370px;
+      height: 450px;
+      background: cyan;
+      transform-origin: bottom right;
+      animation: animate 6s linear infinite;
+}
+
+.contactRight::after{
+      position : absolute;
+      content:'';
+      top: -50%;
+      left: -50%;
+      width: 370px;
+      height: 450px;
+      background: cyan;
+      transform-origin: bottom right;
+      animation: animate 6s linear infinite;
+      animation-delay: -3s;
+}
+
+@keyframes animate{
+      0%{
+            transform: rotate(0deg);
+      }
+      100%{
+            transform: rotate(360deg);
+      }
+}
+
+.contactRight.active{
+      background-color: #272154;
+}
+
+.icon-groups{
+      display: flex;
+      align-items: center;
+      margin: 20px 0px;
+}
+
+
+.icon-groups .icons{
+      width: 45px;
+      height: 45px;
+      border: 2px cyan;
+      border-radius: 22.5px;
+      margin: relative;
+      margin-right: 10px;
+}
+
+.icon-groups .icons .i{
+      font-size: 20px;
+      position: absolute;
+      color: #fff;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+}
+
+.icon-groups span{
+      display: block;
+      font-size: 18px;
+}
+
+.inputBox input{
+      position: relative;
+      width: 100%;
+      padding: 5px 10px;
+      background: transparent;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      color: #0f0c27;
+      font-size: 1em;
+      letter-spacing: 0.05em;
+      box-shadow: inset 2px 3px 5px 2px  rgb(59, 59, 124),
+      inset -2px -3px 5px 2px  rgb(59, 59, 124);
+}
+
+.inputBox textarea{
+      position: relative;
+      width: 100%;
+      padding: 5px 10px 10px;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 1em;
+      letter-spacing: 0.05em;
+      border-radius: 5px;
+      box-shadow: inset 2px 3px 5px 2px  rgb(59, 59, 124),
+      inset -2px -3px 5px 2px  rgb(59, 59, 124);
+}
+
+input[type="submit"]
+{
+      font-size: 20px;
+      border : none;
+      outline: none;
+      background-color: cyan;
+      padding: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      box-shadow: inset 2px 3px 10px 2px  rgb(59, 59, 124),
+      inset -2px -3px 10px 2px  rgb(59, 59, 124);
+      font-weight: 500;
+      border-radius: 70px;
+}
+
+input[type="submit"]:active
+{
+      background-color: cyan;
+      opacity: 0.7;
+}
+
+form{
+      position: absolute;
+      inset: 2px;
+      border-radius: 30px 2px;
+      background: #4c458a;
+      z-index: 1;
+      padding: 20px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+}
+
+form.active{
+      background-color: #272154;
 }
